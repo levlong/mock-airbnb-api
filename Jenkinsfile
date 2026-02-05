@@ -18,7 +18,7 @@ pipeline {
 
   post {
     success {
-      build job: 'AUTOTEST-JOB',
+      build job: 'ci_pplaywright-airbnb',
         parameters: [
           booleanParam(name: 'ALLOW_RUN', value: true)
         ]

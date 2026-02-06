@@ -31,6 +31,17 @@ app.post("/user", (req, res) => {
   });
 });
 
+app.post("/delete/user", (req, res) => {
+  const { id } = req.body;
+
+  res.status(201).json({
+    message: "User deleted",
+    data: {
+      id
+    }
+  });
+});
+
 // Start server
 const PORT = 3000;
 app.listen(PORT, () => {
